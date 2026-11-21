@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>[SEU NOME] – Memórias e Redações</title>
+  <meta name="description" content="Memórias escolares e portfólio de redações de [SEU NOME], formando de [ANO].">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topo">
+    <a class="marca" href="#inicio">[SEU NOME]</a>
+    <nav aria-label="Principal">
+      <a href="#memorias">Memórias escolares</a>
+      <a href="#redacoes">Portfólio de redações</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="retrato">
+        <img src="assets/img/perfil/perfil.jpg" alt="Foto de [SEU NOME]"
+             onerror="this.parentElement.classList.add('sem-foto')">
+        <span>Coloque sua foto em<br>assets/img/perfil/perfil.jpg</span>
+      </div>
+      <div>
+        <h1><span>[SEU NOME COMPLETO]</span></h1>
+        <p class="sub">Formando do 3º ano do Ensino Médio<br>[NOME DA ESCOLA]<br>Turma de [ANO]</p>
+        <p class="frase">“[Uma frase sua, de um professor ou da turma que resuma essa caminhada.]”</p>
+      </div>
+    </section>
+
+    <section id="memorias" class="secao">
+      <h2>Memórias escolares</h2>
+      <p class="intro">[Apresentação curta: do Jardim de Infância ao 3º ano, a minha história na escola.]</p>
+      <div id="linha-tempo" class="linha-tempo"></div>
+    </section>
+
+    <section id="redacoes" class="secao">
+      <h2>Portfólio de redações</h2>
+      <p class="intro">[Apresentação curta: as 17 redações que escrevi nas aulas de Língua Portuguesa e Redação. Clique em um card para ler.]</p>
+      <div id="grade-redacoes" class="grade"></div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>[SEU NOME] – [NOME DA ESCOLA] – [ANO]</p>
+    <p>[Mensagem final / agradecimentos]</p>
+  </footer>
+
+  <dialog id="leitor" aria-labelledby="leitor-titulo">
+    <header>
+      <div>
+        <h3 id="leitor-titulo"></h3>
+        <p id="leitor-meta"></p>
+      </div>
+      <button type="button" id="fechar" aria-label="Fechar redação">Fechar</button>
+    </header>
+    <div id="leitor-texto" class="texto-redacao"></div>
+    <footer>
+      <button type="button" id="anterior">Anterior</button>
+      <span id="posicao"></span>
+      <button type="button" id="proxima">Próxima</button>
+    </footer>
+  </dialog>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
